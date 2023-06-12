@@ -48,13 +48,13 @@ What things you need to install the software and how to install them :
    npm i
    ```
 
-1. Copy `.env.dist` to `.env` and add Telegram env vars: chat id and bot token
+1. Copy `.env.dist` to `.env` 
 
    ```bash
    cp .env-example .env
    ```
 
-1. Replace the values of the variables with your own
+1. Replace the values of the variables with your own and add Telegram env vars: TELEGRAM_CHAT_ID and TELEGRAM_BOT_TOKEN
 
 1. Create Docker images and launch them
 
@@ -148,7 +148,7 @@ npm run test:watch
 ## Call endpoints
 
 ```
-curl --location --request GET 'localhost:3000/chat/message' \
+curl --location 'localhost:3000/chat/message' \
 --header 'Content-Type: application/json' \
 --data '{
     "message":"hello"
@@ -156,11 +156,7 @@ curl --location --request GET 'localhost:3000/chat/message' \
 ```
 
 ```
-curl --location 'localhost:3000/chat/message' \
---header 'Content-Type: application/json' \
---data '{
-    "message":"hello"
-}'
+curl --location 'localhost:3000/chat/message'
 
 ```
 
