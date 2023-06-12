@@ -90,6 +90,12 @@ For more configuration options and details, see the [configuration docs](https:/
 
 ## Running the app
 
+### run migrations
+
+```bash
+npm run typeorm:migration:run
+```
+
 ### development
 
 ```bash
